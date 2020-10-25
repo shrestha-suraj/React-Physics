@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {useSpring,animated} from 'react-spring'
+import {Switch} from 'antd'
 
 const ToggleAnimcation=()=>{
     // This animation uses fadein and fadeout with toggling option
@@ -9,15 +10,15 @@ const ToggleAnimcation=()=>{
     const fade=useSpring({
         // opacity:isToggled?1:0,
         color:isToggled?'green':'red',
-        // fontSize:isToggled?50:30
-        transform:isToggled?'translate3d(0,-50px,0)':'translate3d(0,0,0)'
+        fontSize:isToggled?50:30
+        // transform:isToggled?'translate3d(80px,0,0)':'translate3d(0,0,0)'
     })
 
     return(
         <React.Fragment>
-            <animated.h1 style={fade}>Hello</animated.h1>
+            <animated.h1 style={{border:"solid 1px",...fade}}>Hello</animated.h1>
             <p>Look for the different animation used with react-springs for this toggle</p>
-            <button onClick={()=>setToggle(!isToggled)}>Toggle Hello</button>
+            <Switch checkedChildren="Large" unCheckedChildren="Small" onClick={()=>setToggle(!isToggled)}/>
         </React.Fragment>
     )
 }
