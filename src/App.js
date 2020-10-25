@@ -8,6 +8,7 @@ import Home from "./components/home.component.jsx";
 import AnimatedLogo from "./animated-components/fade-in-logo/logo.component";
 import ToggleAnimation from "./animated-components/toggle-animation/toggle-animation.jsx";
 import ProgressAnimation from './animated-components/progress-animation/progress-animation.jsx'
+import BackgroundParticles from "./animated-components/background-particles/background-particles";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route exact path="/fade-in" component={AnimatedLogo} />
             <Route exact path="/toggle" component={ToggleAnimation} />
             <Route exact path="/progress" component={ProgressAnimation} />
+            <Route exact path="/bg-particles" component={BackgroundParticles} />
           </Switch>
         </div>
       </BrowserRouter>

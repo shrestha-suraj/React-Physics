@@ -21,13 +21,13 @@ const Header = () => {
       style={{ width: "100%" }}
     >
       <Menu.Item key="mail" icon={<SwapOutlined />}>
-        React Physics
+        <Link to="/">React Physics</Link>
       </Menu.Item>
       <SubMenu key="SubMenu" icon={<SettingOutlined />} title="All Animations">
         <Menu.Item key="fade-in"><Link to="/fade-in">Fade In</Link></Menu.Item>
         <Menu.Item key="toggle"><Link to="/toggle">Toggle</Link></Menu.Item>
         <Menu.Item key="progess"><Link to="/progress">Progress</Link></Menu.Item>
-        <Menu.Item key="setting:4">Option 4</Menu.Item>
+        <Menu.Item key="bg-particles"><Link to="/bg-particles">Background Particles</Link></Menu.Item>
         <Menu.Item key="setting:5">Option 5</Menu.Item>
         <Menu.Item key="setting:6">Option 6</Menu.Item>
         <Menu.Item key="setting:7">Option 7</Menu.Item>
