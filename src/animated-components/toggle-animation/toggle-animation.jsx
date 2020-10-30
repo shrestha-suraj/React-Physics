@@ -16,7 +16,7 @@ const ToggleAnimcation=()=>{
 
     return(
         <React.Fragment>
-            <animated.h1 style={{border:"solid 1px",...fade}}>Hello</animated.h1>
+            <animated.h1 style={fade}>Hello</animated.h1>
             <p>Look for the different animation used with react-springs for this toggle</p>
             <Switch checkedChildren="Large" unCheckedChildren="Small" onClick={()=>setToggle(!isToggled)}/>
         </React.Fragment>

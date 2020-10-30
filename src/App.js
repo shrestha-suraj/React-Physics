@@ -9,7 +9,7 @@ import AnimatedLogo from "./animated-components/fade-in-logo/logo.component";
 import ToggleAnimation from "./animated-components/toggle-animation/toggle-animation.jsx";
 import ProgressAnimation from './animated-components/progress-animation/progress-animation.jsx'
 import BackgroundParticles from "./animated-components/background-particles/background-particles";
-
+import BackgroundParticlesImage from "./animated-components/background-particles/background-particles-image";
 const App = () => {
   return (
     <div className="app">
@@ -22,6 +22,7 @@ const App = () => {
             <Route exact path="/toggle" component={ToggleAnimation} />
             <Route exact path="/progress" component={ProgressAnimation} />
             <Route exact path="/bg-particles" component={BackgroundParticles} />
+            <Route exact path="/bg-particles-image" component={BackgroundParticlesImage} />
           </Switch>
         </div>
       </BrowserRouter>

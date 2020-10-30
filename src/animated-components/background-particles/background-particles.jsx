@@ -3,9 +3,9 @@ import Particles from 'react-particles-js';
 
 const BackgroundParticles=()=>{
     return(
-      <div style={{width:"100%",height:"100%",background:"red",position:"relative"}}>
+      <div style={{width:"100%",height:"100%",background:"red",position:"relative",display:"flex",justifyContent:"center",alignItems:"center"}}>
         <Particles 
-        style={{position:"absolute"}}
+        style={{position:"absolute",top:0,left:0}}
         params={{
           "particles": {
               "number": {
@@ -41,7 +41,7 @@ const BackgroundParticles=()=>{
           }
       }} 
         />
-        <h1>Hello World</h1>
+        <h1>Partciles as background</h1>
         </div>
     )
 }
