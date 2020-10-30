@@ -1,7 +1,5 @@
 import React from "react";
-import Particles,{HoverMode} from "react-particles-js";
-import LogoOne from './image1.svg'
-import LogoTwo from './image2.svg'
+import Particles from "react-tsparticles";
 
 const BackgroundParticlesImage = () => {
   return (
@@ -11,75 +9,74 @@ const BackgroundParticlesImage = () => {
         height: "100%",
         background: "red",
         position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <Particles
-        style={{ position: "absolute", top: 0, left: 0 }}
-        params= {{
-            fps_limit: 28,
-            particles: {
-                collisions: {
-                    enable: false
-                },
-                number: {
-                    value: 200,
-                    density: {
-                        enable: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 30,
-                    opacity: .4
-                },
-                move: {
-                    speed: 1
-                },
-                opacity: {
-                    anim: {
-                        enable: true,
-                        opacity_min: .05,
-                        speed: 1,
-                        sync: false,
-                    },
-                    value: .4
-                }
+    <Particles
+        style={{width:"100%",height:"100%"}}
+        id="tsparticles"
+        options={{
+          fpsLimit: 60,
+          interactivity: {
+            detectsOn: "canvas",
+            modes: {
+              bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 40,
+              },
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
             },
-            polygon: {
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outMode: "bounce",
+              random: false,
+              speed: 6,
+              straight: false,
+            },
+            number: {
+              density: {
                 enable: true,
-                scale: .5,
-                move: {
-                    radius: 10,
-                },
-                url: LogoOne,
-                draw: {
-                    enable: true,
-                    stroke: {
-                        color: 'rgba(255, 255, 255, .2)'
-                    }
-                }
+                value_area: 800,
+              },
+              value: 80,
             },
-            retina_detect: false,
-            interactivity: {
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: HoverMode.bubble
-                    }
-                },
-                modes: {
-                    bubble: {
-                        size: 6,
-                        distance: 40
-                    }
-                }
-            }
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              random: true,
+              value: 5,
+            },
+          },
+          detectRetina: true,
         }}
       />
-      <h1>This one has image as the background particle images</h1>
     </div>
   );
 };
